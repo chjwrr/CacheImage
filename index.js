@@ -6,7 +6,8 @@ import {
 import styles from './style'
 import PropTypes from 'prop-types'
 import CacheUtil from './CacheUtil'
-import default_avatar from '../../Images/default_avatar.png'
+import default_avatar from './Images/default_avatar.png'
+
 class CacheImage extends PureComponent {
   constructor(props) {
     super(props)
@@ -68,7 +69,6 @@ class CacheImage extends PureComponent {
     const { imagePath } = this.state
     return (
       <Image
-        key={imagePath ? imagePath : defaultSource + ''}
         style={[imageStyle, styles.backgroudStyle]} source={imagePath ? { uri: imagePath } : defaultSource} />
     )
   }
